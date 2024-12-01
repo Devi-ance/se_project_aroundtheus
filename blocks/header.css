@@ -1,0 +1,13 @@
+.header {
+  margin-top: 45px;
+  max-height: 74px;
+}
+
+.header__logo {
+  margin: 0 0 41px 0;
+}
+
+.header__line {
+  opacity: 20%;
+  margin: auto 0 0;
+}
