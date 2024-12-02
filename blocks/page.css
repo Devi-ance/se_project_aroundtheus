@@ -13,3 +13,26 @@
   flex-direction: column;
   min-height: 100vh;
 }
+
+@media screen and (min-width: 769px) and (max-width: 880px) {
+  .page__content {
+    margin: 0 20px 0;
+  }
+}
+
+@media screen and (min-width: 581px) and (max-width: 768px) {
+  .page {
+    max-width: 768px;
+  }
+
+  .page__content {
+    max-width: 768px;
+    margin: 0 20px 0;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .page {
+    max-width: 580px;
+  }
+}
