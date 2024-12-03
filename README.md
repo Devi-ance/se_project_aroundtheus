@@ -11,8 +11,9 @@ HTML
 
 # Techniques used:
 
+Semantic HTML5
 Flexbox
-Grids
-media queries
-
-ranoutofideas
+Positioning
+Flat BEM file structure
+A custom form
+Media Queries
