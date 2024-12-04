@@ -17,3 +17,7 @@ Positioning
 Flat BEM file structure
 A custom form
 Media Queries
+
+# GitHub Page:
+
+https://devi-ance.github.io/se_project_aroundtheus/
