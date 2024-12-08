@@ -20,29 +20,12 @@ Media Queries
 
 # GitHub Page:
 
-https://devi-ance.github.io/se_project_aroundtheus/ <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+https://devi-ance.github.io/se_project_aroundtheus/ <br />
+
+# Walkthrough (kindof): <br />
+
+https://drive.google.com/file/d/1MQH_0RRMUEn3E33x08LOWD5YVmRBe7sG/view?usp=sharing
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-////I dont have access to this lesson: "https://tripleten.com/trainer/web/lesson/3fdfe924-d791-422d-be18-85c175fa8c83/?from=program"////
