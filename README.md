@@ -22,6 +22,6 @@ Media Queries
 
 https://devi-ance.github.io/se_project_aroundtheus/
 
-# walkthrough video (kindof):
+# Walkthrough video (kindof):
 
 https://drive.google.com/file/d/1MQH_0RRMUEn3E33x08LOWD5YVmRBe7sG/view?usp=sharing
