@@ -30,7 +30,7 @@ const profileEditBtn = document.querySelector(".profile__edit-button");
 const profileName = document.querySelector(".profile__title");
 const profileParagraph = document.querySelector(".profile__paragraph");
 const modal = document.querySelector(".modal");
-const modalForm = document.querySelector(".modal__form");
+const modalForm = document.forms["js-modal-form"];
 const modalCloseBtn = modal.querySelector(".modal__close");
 const modalNameInput = document.querySelector("#modal-title-input");
 const modalParagraphInput = document.querySelector("#modal-paragraph-input");
@@ -50,6 +50,10 @@ function getCardElement(data) {
   return cardElement;
 }
 
+function modalClosed() {
+  modal.classList.remove("modal_open");
+}
+
 // --------------------
 profileEditBtn.addEventListener("click", function () {
   modalNameInput.value = profileName.textContent;
@@ -57,15 +61,13 @@ profileEditBtn.addEventListener("click", function () {
   modal.classList.add("modal_open");
 });
 
-modalCloseBtn.addEventListener("click", function () {
-  modal.classList.remove("modal_open");
-});
+modalCloseBtn.addEventListener("click", modalClosed);
 
 modalForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
   profileName.textContent = modalNameInput.value;
   profileParagraph.textContent = modalParagraphInput.value;
-  modal.classList.remove("modal_open");
+  modalClosed();
 });
 
 /*------------------*/
