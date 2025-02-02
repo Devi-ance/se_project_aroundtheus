@@ -50,7 +50,7 @@ function getCardElement(data) {
   return cardElement;
 }
 
-function modalClosed() {
+function closeModal() {
   modal.classList.remove("modal_open");
 }
 
@@ -61,13 +61,13 @@ profileEditBtn.addEventListener("click", function () {
   modal.classList.add("modal_open");
 });
 
-modalCloseBtn.addEventListener("click", modalClosed);
+modalCloseBtn.addEventListener("click", closeModal);
 
 modalForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
   profileName.textContent = modalNameInput.value;
   profileParagraph.textContent = modalParagraphInput.value;
-  modalClosed();
+  closeModal();
 });
 
 /*------------------*/
