@@ -46,11 +46,11 @@
       </main>
     </div>
 
-    <div class="modal">
+    <div class="modal" id="edit-profile-modal">
       <div class="modal__container">
         <button class="modal__close"></button>
         <p class="modal__heading">Edit Profile</p>
-        <form class="modal__form" id="js-modal-form">
+        <form class="modal__form" id="edit-modal-form">
           <input
             class="modal__form-input"
             type="text"
@@ -66,6 +66,30 @@
             id="modal-paragraph-input"
           />
           <button class="modal__button" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="add-card-modal">
+      <div class="modal__container">
+        <button class="modal__close"></button>
+        <p class="modal__heading">New Place</p>
+        <form class="modal__form" id="add-modal-form">
+          <input
+            class="modal__form-input"
+            type="text"
+            name="title"
+            placeholder="Title"
+            id="modal-title-input"
+          />
+          <input
+            class="modal__form-input"
+            type="text"
+            name="paragraph"
+            placeholder="Image link"
+            id="modal-url-input"
+          />
+          <button class="modal__button" type="submit">Create</button>
         </form>
       </div>
     </div>

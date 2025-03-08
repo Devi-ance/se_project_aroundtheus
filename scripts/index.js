@@ -24,20 +24,72 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
   },
 ];
-/*------------------*/
-
+/*Title and occupation modal related*/
 const profileEditBtn = document.querySelector(".profile__edit-button");
 const profileName = document.querySelector(".profile__title");
 const profileParagraph = document.querySelector(".profile__paragraph");
-const modal = document.querySelector(".modal");
-const modalForm = document.forms["js-modal-form"];
-const modalCloseBtn = modal.querySelector(".modal__close");
-const modalNameInput = document.querySelector("#modal-title-input");
-const modalParagraphInput = document.querySelector("#modal-paragraph-input");
+
+//
+const editProfileModal = document.querySelector("#edit-profile-modal");
+const editModalForm = document.forms["edit-modal-form"];
+const editModalCloseBtn = editProfileModal.querySelector(".modal__close");
+const modalNameInput = editProfileModal.querySelector("#modal-title-input");
+const modalParagraphInput = editProfileModal.querySelector(
+  "#modal-paragraph-input"
+);
+// ///////////////////////////////////
+/*New cards modal related*/
+const addProfileModal = document.querySelector("#add-card-modal");
+const profileAddButton = document.querySelector(".profile__add-button");
+const profileAddCloseBtn = addProfileModal.querySelector(".modal__close");
+const addModalForm = document.forms["add-modal-form"];
+const addModalTitleInput = addModalForm.querySelector("#modal-title-input");
+const addModalUrlInput = addModalForm.querySelector("#modal-url-input");
+
+// ///////////////////////////////////
 const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
 const cardList = document.querySelector(".cards__list");
 
+// --------------------
+function closeModal(modal) {
+  modal.classList.remove("modal_open");
+}
+
+function openModal(modal) {
+  modal.classList.add("modal_open");
+}
+
+function renderCard(data, where) {
+  const cardElement = getCardElement(data);
+  where.prepend(cardElement);
+}
+
+function handleProfileEditForm(evt) {
+  evt.preventDefault();
+  profileName.textContent = modalNameInput.value;
+  profileParagraph.textContent = modalParagraphInput.value;
+  closeModal(editProfileModal);
+}
+
+function handleProfileAddForm(evt) {
+  evt.preventDefault();
+  const name = addModalTitleInput.value;
+  const link = addModalUrlInput.value;
+  renderCard({ name, link }, cardList);
+  closeModal(addProfileModal);
+}
+
+profileEditBtn.addEventListener("click", function () {
+  modalNameInput.value = profileName.textContent;
+  modalParagraphInput.value = profileParagraph.textContent;
+  openModal(editProfileModal);
+});
+
+editModalCloseBtn.addEventListener("click", () => closeModal(editProfileModal));
+
+editModalForm.addEventListener("submit", handleProfileEditForm);
+addModalForm.addEventListener("submit", handleProfileAddForm);
 /*------------------*/
 
 function getCardElement(data) {
@@ -50,29 +102,8 @@ function getCardElement(data) {
   return cardElement;
 }
 
-function closeModal() {
-  modal.classList.remove("modal_open");
-}
-
-// --------------------
-profileEditBtn.addEventListener("click", function () {
-  modalNameInput.value = profileName.textContent;
-  modalParagraphInput.value = profileParagraph.textContent;
-  modal.classList.add("modal_open");
-});
-
-modalCloseBtn.addEventListener("click", closeModal);
-
-modalForm.addEventListener("submit", function (evt) {
-  evt.preventDefault();
-  profileName.textContent = modalNameInput.value;
-  profileParagraph.textContent = modalParagraphInput.value;
-  closeModal();
-});
+initialCards.forEach((data) => renderCard(data, cardList));
 
 /*------------------*/
-
-initialCards.forEach((data) => {
-  const cardElement = getCardElement(data);
-  cardList.append(cardElement);
-});
+profileAddButton.addEventListener("click", () => openModal(addProfileModal));
+profileAddCloseBtn.addEventListener("click", () => closeModal(addProfileModal));
