@@ -54,9 +54,9 @@ const cardList = document.querySelector(".cards__list");
 // ///////////////////////////////////
 const previewModal = document.querySelector("#preview-modal");
 const previewCloseBtn = previewModal.querySelector("#preview-close-btn");
-const previewImage = previewModal.querySelector(".modal-preview__image");
+const previewImage = previewModal.querySelector(".modal__preview__image");
 const previewParagraph = previewModal.querySelector(
-  ".modal-preview__paragraph"
+  ".modal__preview__paragraph"
 );
 //===================
 function closeModal(modal) {

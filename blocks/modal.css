@@ -32,7 +32,7 @@
   position: relative;
 }
 
-.modal-preview__container {
+.modal__preview__container {
   margin: auto;
   max-width: 75vw;
   position: relative;
@@ -54,7 +54,7 @@
   cursor: pointer;
 }
 
-.preview__close {
+.modal__preview-button {
   top: -45px;
   right: -45px;
 }
@@ -98,12 +98,12 @@
   cursor: pointer;
 }
 
-.modal-preview__image {
+.modal__preview__image {
   max-width: 75vw;
   max-height: 75vh;
 }
 
-.modal-preview__paragraph {
+.modal__preview__paragraph {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   color: #fff;
   font-size: 12px;
@@ -126,7 +126,7 @@
     right: 7px;
   }
 
-  .preview__close {
+  .modal__preview-button {
     width: 30px;
     height: 30px;
     right: -35px;
