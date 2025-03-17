@@ -32,7 +32,7 @@
   position: relative;
 }
 
-.modal__preview__container {
+.modal__preview-container {
   margin: auto;
   max-width: 75vw;
   position: relative;
@@ -98,12 +98,12 @@
   cursor: pointer;
 }
 
-.modal__preview__image {
+.modal__preview-image {
   max-width: 75vw;
   max-height: 75vh;
 }
 
-.modal__preview__paragraph {
+.modal__preview-paragraph {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   color: #fff;
   font-size: 12px;
